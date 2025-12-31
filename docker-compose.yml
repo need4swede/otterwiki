@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
     ports:
       # forward the http port to 8080
-      - "8080:80"
+      - "8066:80"
     volumes:
       # mount the local directory ./app-data into the container
       # (so settings, database and repository are accessible)
