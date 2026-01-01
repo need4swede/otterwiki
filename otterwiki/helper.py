@@ -165,6 +165,30 @@ def get_filename(pagepath):
     return p
 
 
+def get_home_pagepath():
+    '''Determine the actual home page path respecting RETAIN_PAGE_NAME_CASE setting.
+
+    When RETAIN_PAGE_NAME_CASE is True, this looks up the actual filename in storage
+    to preserve the user's chosen case (e.g., "home" vs "Home" vs "HOME").
+    When RETAIN_PAGE_NAME_CASE is False, returns "Home" as the display will be normalized.
+    '''
+    if app.config["RETAIN_PAGE_NAME_CASE"]:
+        # Look for the home page file in storage with any case
+        try:
+            files, _ = storage.list(depth=0)
+            for f in files:
+                if f.lower() == "home.md":
+                    # Return the pagepath (filename without .md extension)
+                    return f[:-3]
+        except Exception:
+            pass
+        # Fallback to "Home" if not found
+        return "Home"
+    else:
+        # When case is not retained, the display name is normalized anyway
+        return "Home"
+
+
 def get_attachment_directoryname(filename):
     filename = (
         filename if app.config["RETAIN_PAGE_NAME_CASE"] else filename.lower()
