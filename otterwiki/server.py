@@ -29,6 +29,8 @@ app.config.update(
     SITE_LOGO=None,
     SITE_ICON=None,
     SITE_LANG="en",
+    SIDEBAR_LOGO=None,
+    SIDEBAR_TITLE=None,
     HIDE_LOGO=False,
     AUTH_METHOD="",
     AUTH_HEADERS_USERNAME="x-otterwiki-name",

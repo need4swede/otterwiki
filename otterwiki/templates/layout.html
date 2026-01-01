@@ -194,8 +194,12 @@
             {% if not config.HIDE_LOGO %}
             <div class="sidebar-otter" >
                 <a href=" {{ url_for("about") }}" class="sidebar-link">
+{%- if config.SIDEBAR_LOGO %}
+                <img class="sidebar-logo" src="{{ config.SIDEBAR_LOGO }}" alt=""/><br/>
+{%- else %}
                 <img class="sidebar-logo" src="{{ url_for("static", filename="img/otter.png") | debug_unixtime }}" alt=""/><br/>
-                An Otter Wiki
+{%- endif %}
+                {{ config.SIDEBAR_TITLE or config.SITE_NAME or "An Otter Wiki" }}
                 </a>
             </div>
             {% endif %}

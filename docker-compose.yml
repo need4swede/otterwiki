@@ -6,6 +6,8 @@
 # Please read the Installation guide <https://otterwiki.com/Installation>
 # to get started.
 #
+# See .env.example for custom branding configuration options.
+#
 services:
   web:
     build: .
@@ -17,3 +19,7 @@ services:
       # mount the local directory ./app-data into the container
       # (so settings, database and repository are accessible)
       - ./app-data:/app-data
+    # Load environment variables from .env file (see .env.example for options)
+    env_file:
+      - path: .env
+        required: false
