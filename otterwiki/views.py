@@ -29,6 +29,7 @@ from otterwiki.helper import (
     toast,
     health_check,
     get_pagename_prefixes,
+    get_home_pagepath,
 )
 from otterwiki.version import __version__
 from otterwiki.util import sanitize_pagename
@@ -41,7 +42,7 @@ from flask_login import login_required
 #
 @app.route("/")
 def index():
-    return view()
+    return view(path=get_home_pagepath())
 
 
 @app.route("/robots.txt")

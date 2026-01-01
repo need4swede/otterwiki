@@ -546,7 +546,7 @@ class Page:
 
         # generate canonical URL (without trailing slash)
         # special case: if this is the Home page, canonical should point to root "/"
-        if self.pagepath == "Home":
+        if self.pagepath.lower() == "home":
             canonical_url = url_for("index", _external=True)
         else:
             canonical_url = url_for("view", path=self.pagepath, _external=True)
