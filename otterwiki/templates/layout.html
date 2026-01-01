@@ -52,6 +52,8 @@
     <link href="{{ url_for("static", filename="css/halfmoon.min.css") | debug_unixtime }}" rel="stylesheet" media="screen" />
     <!-- Otterwiki CSS -->
     <link href="{{ url_for("static", filename="css/otterwiki.css") | debug_unixtime }}" rel="stylesheet" media="screen" />
+    <!-- Modern Dark Theme -->
+    <link href="{{ url_for("static", filename="css/dark-theme.css") | debug_unixtime }}" rel="stylesheet" media="screen" />
     <!-- Otterwiki Print -->
     <link href="{{ url_for("static", filename="css/print.css") | debug_unixtime }}" rel="stylesheet" media="print" />
     <!-- Font awesome -->
@@ -72,11 +74,11 @@
 {%- if request.cookies.get('halfmoon_preferredMode') == "dark-mode" %}
 {#- Dark Mode Optimization -#}
     <!-- Chrome, Firefox OS and Opera mobile address bar theming -->
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#161b22">
     <!-- Windows Phone mobile address bar theming -->
-    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#161b22">
     <!-- iOS Safari mobile address bar theming -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#161b22">
 {% endif -%}
 </head>
 {% if request.cookies.get('halfmoon_preferredMode') %}
