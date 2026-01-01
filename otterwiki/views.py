@@ -88,17 +88,9 @@ def healthz():
 #
 # wiki views
 #
-@app.route("/-/about")
+@app.route("/-/neptune")
 def about():
-    with open(os.path.join(app.root_path, "about.md")) as f:
-        content = f.read()
-    htmlcontent, _, library_requirements = render.markdown(content)
-    return render_template(
-        "about.html",
-        htmlcontent=htmlcontent,
-        __version__=__version__,
-        library_requirements=library_requirements,
-    )
+    return redirect("https://neptuneplayer.com")
 
 
 @app.route("/-/syntax")

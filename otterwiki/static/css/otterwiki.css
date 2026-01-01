@@ -6,6 +6,7 @@
 @import "partials/sidebar.css";
 @import "partials/documentation.css";
 @import "partials/history.css";
+@import "dark-theme.css";
 
 .navbar {
     background: #d2d2d2;
