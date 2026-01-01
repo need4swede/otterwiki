@@ -7,23 +7,23 @@
    Color Palette (CSS Custom Properties)
    ============================================ */
 .dark-mode {
-    /* Background Colors - Layered depth */
-    --dm-bg-canvas: #0d1117;
+    /* Background Colors - Layered depth (complementing sidebar #090f18) */
+    --dm-bg-canvas: #060a10;
     --dm-bg-default: #090f18;
-    --dm-bg-subtle: #1c2128;
-    --dm-bg-muted: #21262d;
-    --dm-bg-emphasis: #30363d;
+    --dm-bg-subtle: #0e1520;
+    --dm-bg-muted: #131c2a;
+    --dm-bg-emphasis: #1a2536;
 
     /* Text Colors */
-    --dm-text-primary: #e6edf3;
-    --dm-text-secondary: #8b949e;
-    --dm-text-muted: #6e7681;
-    --dm-text-placeholder: #545d68;
+    --dm-text-primary: #e2e8f0;
+    --dm-text-secondary: #94a3b8;
+    --dm-text-muted: #64748b;
+    --dm-text-placeholder: #475569;
 
     /* Border Colors */
-    --dm-border-default: #30363d;
-    --dm-border-muted: #21262d;
-    --dm-border-subtle: #1c2128;
+    --dm-border-default: #1e2d3d;
+    --dm-border-muted: #162232;
+    --dm-border-subtle: #0f1824;
 
     /* Accent Colors */
     --dm-accent-primary: #58a6ff;
